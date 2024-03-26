@@ -12,8 +12,8 @@ if (
 ) {
   extractButton.addEventListener('click', () => {
     const html = htmlInput.value;
-    const imgSrcs = extractImageSources(html); // Extrae las fuentes de las imágenes del HTML.
-    displayImages(imgSrcs, imagesContainer); // Muestra las imágenes en el contenedor.
+    const imgSrcs = extractImageSources(html);
+    displayImages(imgSrcs, imagesContainer);
   });
 } else {
   console.error('Error al procesar el HTML');
