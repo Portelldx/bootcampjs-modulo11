@@ -1,5 +1,5 @@
 import './style.css';
-import { extractImageLinks } from './extractImages';
+import { extractImageSources, displayImages } from './extractImages';
 
 const extractButton = document.getElementById('extractButton');
 const htmlInput = document.getElementById('htmlInput');
@@ -12,8 +12,9 @@ if (
 ) {
   extractButton.addEventListener('click', () => {
     const html = htmlInput.value;
-    extractImageLinks(html, imagesContainer);
+    const imgSrcs = extractImageSources(html); // Extrae las fuentes de las imágenes del HTML.
+    displayImages(imgSrcs, imagesContainer); // Muestra las imágenes en el contenedor.
   });
 } else {
-  console.error('Error al procesar el html');
+  console.error('Error al procesar el HTML');
 }
