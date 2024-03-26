@@ -1,5 +1,4 @@
 import './style.css';
-import './style.css';
 import { extractImageLinks } from './extractImages';
 
 const extractButton = document.getElementById('extractButton');
@@ -16,5 +15,5 @@ if (
     extractImageLinks(html, imagesContainer);
   });
 } else {
-  console.error('Algún elemento no se encontró o no es del tipo esperado.');
+  console.error('Error al procesar el html');
 }
